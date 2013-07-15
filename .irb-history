@@ -1,0 +1,40 @@
+quit
+quit
+touch("button index:0")
+query("label index:0 :text")
+query("label index:0")
+query("label index:0", :text)
+touch("button index:1")
+query("label index:0", :text)
+quit
+query('label')
+query('label')[0]
+query('label')[0] text:'Nothing Tapped'
+query('label')[0] text
+query(('label')[0] text:'Nothing tapped')
+query((('label')[0]) text:'Nothing tapped')
+query((('label')[0]) text:"Nothing tapped")
+query('label':text)
+query('label')
+query('label' text:'Nothing tapped')
+query(label[0] text:'Nothing tapped')
+query("label text:'Nothing tapped'")
+query("query("label[0]") text:'Nothing tapped'")
+query("label")[0]
+query(query("label")[0] text:'Nothing tapped')
+query("query("label")[0] text:'Nothing tapped'")
+query("query('label')[0] text:'Nothing tapped'")
+query("query('label')[1] text:'Nothing tapped'")
+query("query('label')[2] text:'Nothing tapped'")
+query("query('label')[3] text:'Nothing tapped'")
+query('label')
+query('label')[0]
+query('label' text:'textLabel')
+query("label" marked:'textLabel')
+query("label marked:'textLabel'")
+query("query("label marked:'textLabel'") text:'Nothing tapped'")
+query(query("label marked:'textLabel'") text:'Nothing tapped')
+query("label marked:'textLabel'")
+query("label marked:'textLabel' text:'Nothing tapped'")
+quit
+quit

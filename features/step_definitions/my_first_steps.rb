@@ -1,4 +1,9 @@
 Given /^I am on the Welcome Screen$/ do
-  element_exists("view")
-  sleep(STEP_PAUSE)
+  check_element_exists("label text:'Home'")
 end
+
+Then /^I should see text "(.*?)" in TextLabel/ do |expectedText|
+  	query("label marked:'textLabel' text:#{expectedText}")
+end
+
+

@@ -22,6 +22,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="yesButtonTapped:" destination="2" eventType="touchUpInside" id="tkG-75-2ok"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hD-h8-Gdf">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -32,9 +35,12 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="noButtonTapped:" destination="2" eventType="touchUpInside" id="WCN-V1-M4w"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nothing tapped" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZ7-NZ-hXg">
-                                <accessibility key="accessibilityConfiguration" label="textlabel"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nothing tapped" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZ7-NZ-hXg">
+                                <accessibility key="accessibilityConfiguration" label="textLabel"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="1AO-Zt-XcN"/>
                                     <constraint firstAttribute="width" constant="232" id="lys-nc-f9g"/>
@@ -43,10 +49,22 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sc2-Ty-vMV">
+                                <accessibility key="accessibilityConfiguration" label="homeLabel"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="KlX-VG-ndK"/>
+                                    <constraint firstAttribute="height" constant="32" id="YH1-61-Ni1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="sc2-Ty-vMV" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="BHF-b5-hdg"/>
                             <constraint firstAttribute="bottom" secondItem="q1U-Mk-2vv" secondAttribute="bottom" constant="223" id="R00-HN-TCZ"/>
+                            <constraint firstItem="sc2-Ty-vMV" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="TOL-MX-l7S"/>
                             <constraint firstAttribute="bottom" secondItem="7hD-h8-Gdf" secondAttribute="bottom" constant="162" id="eBC-7M-DzD"/>
                             <constraint firstItem="cZ7-NZ-hXg" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="45" id="ffn-04-OEi"/>
                             <constraint firstItem="7hD-h8-Gdf" firstAttribute="centerX" secondItem="q1U-Mk-2vv" secondAttribute="centerX" type="default" id="iHW-ji-qEg"/>
@@ -54,6 +72,9 @@
                             <constraint firstItem="q1U-Mk-2vv" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="137" id="xVM-0U-dER"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textLabel" destination="cZ7-NZ-hXg" id="23r-JH-cfs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
@@ -62,6 +83,11 @@
     <classes>
         <class className="CBViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CBViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="noButtonTapped:"/>
+                <relationship kind="action" name="yesButtonTapped:"/>
+                <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
+            </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>

@@ -3,12 +3,18 @@ Feature: Running a test
   I want to have a sample feature file
   So I can begin testing quickly
 
-Scenario: Default setup
+Scenario: Init state
   Given I am on the Welcome Screen
-  There is a label with text "Nothing tapped"
+  Then I should see text "Nothing tapped" in TextLabel
+  Then I should see a "YES" button
+  Then I should see a "NO" button
 
+Scenario: YES Tap
+  Given I am on the Welcome Screen
+  When I touch the "YES" button
+  Then I should see text "YES button tapped" in TextLabel
 
-  Then I touch the "YES" button
-  And take picture
-
-
+Scenario: NO Tap
+  Given I am on the Welcome Screen
+  When I touch the "NO" button
+  Then I should see text "NO button tapped" in TextLabel

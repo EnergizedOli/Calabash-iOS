@@ -1,10 +1,3 @@
-//
-//  CBViewController.m
-//  CalabashExample
-//
-//  Created by Oli Dainton on 15/07/2013.
-//  Copyright (c) 2013 EnergizedWork. All rights reserved.
-//
 
 #import "CBViewController.h"
 
@@ -26,4 +19,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)yesButtonTapped:(id)sender {
+    [_textLabel setText:@"YES button tapped"];
+}
+
+- (IBAction)noButtonTapped:(id)sender {
+    [_textLabel setText:@"NO button tapped"];
+}
 @end
