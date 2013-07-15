@@ -26,7 +26,7 @@
 
 - (void)testExample
 {
-    STAssertTrue(YES, @"Single passing test");
+    STAssertTrue(NO, @"Single passing test");
 }
 
 @end
